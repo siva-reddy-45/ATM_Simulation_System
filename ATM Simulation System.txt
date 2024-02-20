@@ -1,0 +1,51 @@
+                             ATM Simulation System
+                        ==================================
+This Java project implements a command-line ATM simulation system with extensible card support.
+Users can insert different ATM cards (e.g., HDFC, SBI, Kotak) to perform various
+banking operations such as deposit, withdrawal, balance inquiry, and mini statement.
+
+
+Project Structure:
+==================
+
+ATMMachine.java:    The main class orchestrating the ATM simulation. It dynamically loads and instantiates ATM card classes 
+---------------      based on user input, providing a menu-driven interface for banking operations.
+
+BankAccount.java:  Represents a simple bank account with deposit, withdrawal, and balance functionalities. 
+-----------------    It is utilized by specific ATM card implementations.
+
+ATMCard.java: An interface defining the standard ATM card operations - deposit, withdraw, and check current balance.
+-------------
+
+--> HDFCBankCard.java, SBIBankCard.java, KotakBankCard.java: Concrete implementations of the ATMCard interface, representing HDFC, SBI, and Kotak bank cards, respectively.
+
+--> InsufficientFundsException.java, InvalidAmountException.java: Custom exception classes for handling insufficient funds and invalid amount scenarios.
+
+How to Use:
+============
+1.Clone the repository.
+2.Compile all Java files.
+3.Run the ATMMachine class.
+4.Follow the on-screen instructions to insert a card, choose an option, and perform banking operations.
+
+=================================================================================================================
+| // ATMMachine Usage Example with SBIBankCard                                                                  |
+| ---------------------------------------------                                                                 |
+|                                                                                                               |
+|  1. Insert card: SBIBankCard                                                                                  |
+|  2. Choose option: 1 (Deposit)                                                                                |
+|  3. Enter Deposit Amount: 1000                                                                                |
+|  4. Result: 1000 cash credited to your account, and the current balance is displayed.                         |
+|  5. Choose option: 2 (Withdraw)                                                                               |
+|  6. Enter Withdraw Amount: 500                                                                                |
+|  7. Result: Take Your Cash, 500 cash debited from your account, and the current balance is displayed.         |
+|  8. Choose option: 3 (Balance Enquiry)                                                                        |
+|  9. Result: Display the current balance.                                                                      |
+|  10. Choose option: 4 (Mini Statement)                                                                        |
+|  11. Result: Display "Temporarily Out Of Service."                                                            |
+|  12. Choose option: 5 (Exit)                                                                                  |
+|  13. Result: Display "Take Your Card" and "Thank You, Visit Again." Exit the program.                         |
+|                                                                                                               |
+|  Note: Repeat the steps as needed or try different options.                                                   |
+|  ----                                                                                                         |
+=================================================================================================================
